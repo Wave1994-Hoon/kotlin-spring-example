@@ -1,9 +1,11 @@
 package com.hooon.kotlinspring.domain
 
-import java.time.LocalDateTime
-
-class User(
+class Account(
     val id: Long? = null,
 
+    val name: String,
+
     val email: String,
+
+    val password: String
 )
