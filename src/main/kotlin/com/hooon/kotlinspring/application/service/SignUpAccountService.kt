@@ -1,6 +1,6 @@
 package com.hooon.kotlinspring.application.service
 
-import com.hooon.kotlinspring.application.port.out.SignUpAccountPort
+import com.hooon.kotlinspring.application.port.out.command.SignUpAccountPort
 import com.hooon.kotlinspring.domain.Account
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

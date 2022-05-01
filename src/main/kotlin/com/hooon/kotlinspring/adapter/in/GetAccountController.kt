@@ -1,12 +1,11 @@
 package com.hooon.kotlinspring.adapter.`in`
 
-import com.hooon.kotlinspring.application.service.impl.GetAccountRequest
-import com.hooon.kotlinspring.application.service.impl.GetAccountResponse
-import com.hooon.kotlinspring.application.service.impl.GetAccountService
+import com.hooon.kotlinspring.application.service.GetAccountRequest
+import com.hooon.kotlinspring.application.service.GetAccountResponse
+import com.hooon.kotlinspring.application.service.GetAccountService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController

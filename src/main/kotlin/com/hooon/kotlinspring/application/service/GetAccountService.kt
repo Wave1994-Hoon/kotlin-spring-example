@@ -1,10 +1,6 @@
-package com.hooon.kotlinspring.application.service.impl
+package com.hooon.kotlinspring.application.service
 
 import com.hooon.kotlinspring.application.port.out.query.GetAccountPort
-import com.hooon.kotlinspring.application.service.Query
-import com.hooon.kotlinspring.application.service.RequestQuery
-import com.hooon.kotlinspring.application.service.ResponseQuery
-import com.hooon.kotlinspring.application.service.exception.AccountNotFoundException
 import com.hooon.kotlinspring.domain.Account
 import org.springframework.stereotype.Service
 
@@ -14,11 +10,10 @@ class GetAccountService(
 ) : Query<GetAccountRequest, GetAccountResponse> {
 
   override fun apply(request: GetAccountRequest): GetAccountResponse {
-    val account: Account = port.findById(request.accountId) ?: throw AccountNotFoundException()
+    val account: Account = port.getById(request.accountId)
     return GetAccountResponse(account)
   }
 }
-
 
 data class GetAccountRequest(
   val accountId: Long
