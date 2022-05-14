@@ -10,28 +10,26 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class SignUpAccountController(
-  private val service: SignUpAccountService
+    private val service: SignUpAccountService
 ) {
 
-  @PostMapping("/account/sign-up")
-  fun signUpAccount(@RequestBody command: SignUpAccountCommand): ResponseEntity<SignUpResponse> {
-    val response = service.apply(
-      SignUpRequest(
-        name = command.name,
-        email = command.email,
-        password = command.password
-      )
-    )
-    return ResponseEntity.ok().body(response)
-  }
+    @PostMapping("/account/sign-up")
+    fun signUpAccount(@RequestBody command: SignUpAccountCommand): ResponseEntity<SignUpResponse> {
+        val response = service.apply(
+            SignUpRequest(
+                name = command.name,
+                email = command.email,
+                password = command.password
+            )
+        )
+        return ResponseEntity.ok().body(response)
+    }
 }
 
 data class SignUpAccountCommand(
-  val name: String,
+    val name: String,
 
-  val email: String,
+    val email: String,
 
-  val password: String
+    val password: String
 )
-
-

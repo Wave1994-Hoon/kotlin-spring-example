@@ -6,19 +6,19 @@ import org.springframework.stereotype.Service
 
 @Service
 class GetAccountService(
-  private val port: GetAccountPort
+    private val port: GetAccountPort
 ) : Query<GetAccountRequest, GetAccountResponse> {
 
-  override fun apply(request: GetAccountRequest): GetAccountResponse {
-    val account: Account = port.getById(request.accountId)
-    return GetAccountResponse(account)
-  }
+    override fun apply(request: GetAccountRequest): GetAccountResponse {
+        val account: Account = port.getById(request.accountId)
+        return GetAccountResponse(account)
+    }
 }
 
 data class GetAccountRequest(
-  val accountId: Long
+    val accountId: Long
 ) : RequestQuery
 
 data class GetAccountResponse(
-  val account: Account
+    val account: Account
 ) : ResponseQuery

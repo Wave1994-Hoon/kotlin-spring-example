@@ -9,10 +9,10 @@ import com.hooon.kotlinspring.domain.Account
 
 @Adapter
 class GetAccountAdapter(
-  private val repository: AccountRepository
+    private val repository: AccountRepository
 ) : GetAccountPort {
 
-  override fun getById(accountId: Long): Account {
-    return repository.getByAccountId(accountId).toDomain()
-  }
+    override fun getById(accountId: Long): Account {
+        return repository.getByAccountId(accountId).toDomain()
+    }
 }

@@ -6,10 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Repository
 
-
 fun AccountRepository.getByAccountId(accountId: Long) =
     this.findByIdOrNull(accountId) ?: throw AccountNotFoundException()
 
 @Repository
-interface AccountRepository : JpaRepository<AccountEntity, Long> {
-}
+interface AccountRepository : JpaRepository<AccountEntity, Long>

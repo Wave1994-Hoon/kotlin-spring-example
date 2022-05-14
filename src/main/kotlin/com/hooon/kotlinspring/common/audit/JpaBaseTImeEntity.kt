@@ -12,12 +12,12 @@ import javax.persistence.MappedSuperclass
 @EntityListeners(AuditingEntityListener::class)
 abstract class JpaBaseTImeEntity {
 
-  @CreatedDate
-  @Column(name = "createdAt", updatable = false)
-  val createdAt: LocalDateTime? = null
+    @CreatedDate
+    @Column(name = "createdAt", updatable = false)
+    val createdAt: LocalDateTime? = null
 
-  @LastModifiedDate
-  @Column(name = "updatedAt")
-  var updatedAt: LocalDateTime? = null
-    protected set
+    @LastModifiedDate
+    @Column(name = "updatedAt")
+    var updatedAt: LocalDateTime? = null
+        protected set
 }
