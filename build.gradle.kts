@@ -34,6 +34,8 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java")
     testImplementation("io.mockk:mockk:1.9.3")
     testImplementation("com.ninja-squad:springmockk:2.0.3")
+    testImplementation("com.tngtech.archunit:archunit-junit5-api:0.23.1")
+    testImplementation("com.tngtech.archunit:archunit-junit5-engine:0.23.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "mockito-core")
     }
