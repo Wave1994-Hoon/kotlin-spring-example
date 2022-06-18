@@ -12,7 +12,7 @@ class GetAccountAdapter(
     private val repository: AccountRepository
 ) : GetAccountPort {
 
-    override fun findById(accountId: Long): Account {
+    override fun getById(accountId: Long): Account {
         return repository.getByAccountId(accountId).toDomain()
     }
 }

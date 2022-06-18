@@ -12,7 +12,7 @@ class GetAccountService(
 ) : GetAccountQuery {
 
     override fun getAccount(accountId: Long): GetAccountResponse {
-        return port.findById(accountId)
+        return port.getById(accountId)
             .toGetAccountResponse()
     }
 }
