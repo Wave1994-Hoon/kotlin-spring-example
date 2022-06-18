@@ -1,4 +1,4 @@
-package com.hooon.kotlinspring.common.audit
+package com.hooon.kotlinspring.adapter.out.persistence.entity
 
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate

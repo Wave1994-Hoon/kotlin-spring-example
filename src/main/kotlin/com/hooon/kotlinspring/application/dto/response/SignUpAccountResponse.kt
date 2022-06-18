@@ -1,6 +1,6 @@
-package com.hooon.kotlinspring.domain
+package com.hooon.kotlinspring.application.dto.response
 
-class Account(
+data class SignUpAccountResponse(
     val id: Long = 0L,
     val name: String = "",
     val email: String = "",

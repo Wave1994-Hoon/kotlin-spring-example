@@ -1,13 +1,13 @@
 package com.hooon.kotlinspring.adapter.out.persistence
 
-import com.hooon.kotlinspring.adapter.out.persistence.entity.mapper.toDomain
-import com.hooon.kotlinspring.adapter.out.persistence.entity.mapper.toJpaEntity
+import com.hooon.kotlinspring.adapter.out.persistence.mapper.toDomain
+import com.hooon.kotlinspring.adapter.out.persistence.mapper.toJpaEntity
 import com.hooon.kotlinspring.adapter.out.persistence.repository.AccountRepository
-import com.hooon.kotlinspring.application.port.out.command.SignUpAccountPort
-import com.hooon.kotlinspring.common.Adapter
+import com.hooon.kotlinspring.application.port.out.SignUpAccountPort
 import com.hooon.kotlinspring.domain.Account
+import org.springframework.stereotype.Repository
 
-@Adapter
+@Repository
 class SignUpAccountAdapter(
     private val accountRepository: AccountRepository
 ) : SignUpAccountPort {

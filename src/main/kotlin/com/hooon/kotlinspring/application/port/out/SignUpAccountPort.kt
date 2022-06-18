@@ -1,4 +1,4 @@
-package com.hooon.kotlinspring.application.port.out.command
+package com.hooon.kotlinspring.application.port.out
 
 import com.hooon.kotlinspring.domain.Account
 

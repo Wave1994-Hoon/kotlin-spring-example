@@ -1,6 +1,5 @@
 package com.hooon.kotlinspring.adapter.out.persistence.entity
 
-import com.hooon.kotlinspring.common.audit.JpaBaseTImeEntity
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -14,15 +13,15 @@ class AccountEntity(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, updatable = false)
-    val id: Long? = null,
+    val id: Long = 0L,
 
     @Column(name = "name")
-    var name: String,
+    val name: String = "",
 
     @Column(name = "email", unique = true, updatable = false)
-    var email: String,
+    val email: String = "",
 
     @Column(name = "password")
-    var password: String,
+    var password: String = "",
 
 ) : JpaBaseTImeEntity()

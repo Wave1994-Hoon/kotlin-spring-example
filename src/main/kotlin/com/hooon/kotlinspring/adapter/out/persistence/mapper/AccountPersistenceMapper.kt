@@ -1,4 +1,4 @@
-package com.hooon.kotlinspring.adapter.out.persistence.entity.mapper
+package com.hooon.kotlinspring.adapter.out.persistence.mapper
 
 import com.hooon.kotlinspring.adapter.out.persistence.entity.AccountEntity
 import com.hooon.kotlinspring.domain.Account
